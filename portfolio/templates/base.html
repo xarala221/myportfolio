@@ -1,0 +1,49 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <!-- Static Files  -->
+    <link rel="stylesheet" href="{% static "css/bootstrap.min.css" %}">
+    <link rel="stylesheet" href="{% static "css/bootstrap-better-nav.min.css" %}">
+    <link rel="stylesheet" href="{% static "css/normalize.css" %}">
+    <link rel="stylesheet" href="{% static "css/font-awesome.min.css" %}">
+    <link rel="stylesheet" href="{% static "css/style.css" %}">
+    <title> {% block title %} Ousseynou Diop | Full Stack Developpeur web{% endblock %}</title>
+  </head>
+  <body>
+
+    {% block message %}
+    {% if messages %}
+            
+    <div class='alert alert-success'>
+        <div class='container'>
+         {% for message in messages %}
+            {{ message }}<br/>
+            {% endfor %}
+        </div>
+    </div>
+
+    {% endif %}
+    {% endblock message %}
+ 
+ 
+    {% block content %}
+
+    {% endblock %}
+    
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!-- Static Files -->
+    <script src="{% static "js/jquery-3.3.1.min.js"  %}" crossorigin="anonymous"></script>
+    <script src="{% static "js/popper.min.js"  %}" crossorigin="anonymous"></script>
+    <script src="{% static "js/bootstrap.min.js"  %}" crossorigin="anonymous"></script>
+    <script src="{% static "js/bootstrap-better-nav.min.js"  %}" crossorigin="anonymous"></script>
+    <script src="{% static "js/main.js"  %}" crossorigin="anonymous"></script>
+    
+  </body>
+</html>

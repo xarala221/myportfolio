@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% load embed_video_tags %}
+{% load static %}
+{% block title %}
+Ousseynou Diop blog
+{% endblock title %}
+{% block content %}
+{% include 'blog/blog_nav.html' %}
+{% if all_post %}
+<div class="container retour">
+    <h1 class="text-center">{{title}}</h1>
+</div>
+<div class="container">
+    {% for post in all_post %}
+    <div class="row">
+        <div class="col-md-4">
+            {% if post.image %}
+            <a href="{% url 'detail' post.id %}"><img src="{{ post.image.url }}" alt="" class="img-responsive img-thumbnail"></a>
+            {% elif post.video %}
+            {% video post.video as my_video %}
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" src="{{ my_video.url }}"></iframe>
+            </div>
+            {% endvideo %}
+            {% else %}
+            <!-- download no-image -->
+            <img src="{% static 'images/nophoto.png' %}" alt="" class="img-responsive img-thumbnail">
+            {% endif %}
+        </div>
+        <div class="col-md-6">
+            <a style="color:#c05026; text-decoration:none;" href="{% url 'detail' post.id %}"><h2 class="post-title">{{ post.title }}</h2></a>
+            <p class="post-content">{{ post.content|truncatewords:50 }}</p>
+            <p><i class="fa fa-calendar"></i> {{ post.published_at }}  <i class="fa fa-user-plus"></i> {{ post.author.get_full_name }}</p>
+        </div>
+    </div>
+    <hr class="my-4">
+    {% endfor %}
+</div>
+{% else %}
+<p class="text-center">We have no post</p>
+{% endif %}
+{% include 'pages/partials/footer.html' %}
+{% endblock content %}

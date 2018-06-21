@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% load embed_video_tags %}
+{% load static %}
+{% block title %}
+Detail page
+{% endblock title %}
+{% block content %}
+{% include 'blog/blog_nav.html' %}
+<div class="container retour">
+  <p><a href="{% url 'blog' %}" class="btn btn-outline-secondary float-left">Retour</a> <a href="{% url 'blog' %}" class="btn btn-outline-secondary float-right">Home</a></p>
+</div>
+<div class="post-detail">
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+         <h1>{{ post.title }}</h1>
+         {% if post.image %}
+         <img src="{{ post.image.url }}" alt="" class="img-responsive img-thumbnail" width="100%">
+         {% elif post.video %}
+         {% video post.video as my_video %}
+         <div class="embed-responsive embed-responsive-16by9">
+             <iframe class="embed-responsive-item" src="{{ my_video.url }}"></iframe>
+         </div>
+         {% endvideo %}
+         {% else %}
+         <!-- download no-image -->
+         <img src="{% static 'images/nophoto.png' %}" alt="" class="img-responsive img-thumbnail">
+         {% endif %}
+         <p style="font-size:20px; margin-top:20px">{{ post.content }}</p>
+        </div>
+    </div>
+</div>
+</div>
+<div class="container author ">
+  <div class="media">
+    <img src="{% static 'images/me.jpg' %}" alt="" class="mr-3 img-thumbnail" width="64px">
+    <div class="media-body">
+        <h3>Auteur : {{ post.author.get_full_name }}</h3>
+        <p>Je suis Full Stack developpeur et createur de contenu.</p>
+    </div>
+  </div>
+
+</div>
+{% include 'pages/partials/footer.html' %}
+{% endblock content %}

@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"editor.fontSize": 18,
+		"editor.tabSize": 4,
+		"python.pythonPath": "/usr/bin/python3",
+	}
+}

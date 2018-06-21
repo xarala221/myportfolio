@@ -1,0 +1,14 @@
+appdirs==1.4.3
+dj-database-url==0.5.0
+Django==2.0.5
+django-crispy-forms==1.7.2
+gunicorn==19.8.1
+nmap==0.0.1
+olefile==0.45.1
+packaging==17.1
+Pillow==5.1.0
+psycopg2==2.7.4
+pyparsing==2.2.0
+python-nmap==0.6.1
+pytz==2018.4
+six==1.11.0

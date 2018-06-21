@@ -1,0 +1,49 @@
+<!-- header and navbar -->
+{% load static %}
+    <nav id="navbar" class="navbar navbar-expand-md navbar-dark fixed-top bg-dark ">
+      <div class="container">
+        <a class="navbar-brand" href="{% url 'home' %}">Ousseynou Diop</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#skills">Skills</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#portfolio">Portfolio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" target="blank" href="{% url 'blog' %}">Blog</a>
+              </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+<div id="header">
+    <div class="container">
+      <div class="overlay">
+        <div class="row centering-vh">
+          <div class="col-md-12">
+            <div class="intro text-center">
+                <h1 class="intro-intro center-border"><a href="" class="typewrite" data-period="2000" data-type='[ "Hi, Im Ousseynou.", "I am Creative.", "I Love Design.", "I Love to Develop." ]'>
+                    <span class="wrap"></span>
+                  </a></h1>
+                <p class="intro-desc">I'm Full Stack developer from Senegal.</p>
+                <a href="#skills"><i class="fa fa-angle-double-down"></i></a> 
+            </div>
+          </div>
+          <!--
+          <div class="col-md-4">
+            <img src="{% static 'images/auth.jpg' %}" alt="" class="img-responsive header-img" width="600px">
+          </div>
+          -->
+        </div>
+      </div>
+    </div>
+    
+</div>

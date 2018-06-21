@@ -1,0 +1,130 @@
+{% load static %}
+
+<!-- competences -->
+<div id="skills" class="bg-secondary">
+    <div class="overlay">
+  <div class="container text-center">
+    <h2 class="h1 skills-intro center-border intro-h1">Skills</h2>
+    <p class="skills-desc intro-desc-p">I'm a perfectionist! and i'm really good at</p>
+    <div class="row">
+      <div class="col-md-4">
+          <h2 class="skill-item">Front-End</h2>
+          <i class="fa fa-magic"></i>
+          <ul class="list-group list-one list-unstyled">
+            <li class="list-group-item">Html(5) && css(3)</li>
+            <li class="list-group-item">Bootstrap && bulma</li>
+            <li class="list-group-item">JavaScript && Jquery</li>
+            <li class="list-group-item">ReactJs</li>
+          </ul>
+      </div>
+      <div class="col-md-4">
+          <h2 class="skill-item">Back-End</h2>
+          <i class="fa fa-database"></i>
+          <ul class="list-group list-two unstyled-list">
+            <li class="list-group-item">Python-Django</li>
+            <li class="list-group-item">PHP</li>
+            <li class="list-group-item">Wordpress && Joomla</li>
+            <li class="list-group-item">MySQl && SQlite</li>
+          </ul>
+      </div>
+      <div class="col-md-4">
+          <h2 class="skill-item">Tools</h2>
+          <i class="fa fa-gears"></i>
+          <ul class="list-group list-three unstyled-list">
+            <li class="list-group-item">GitHub && Bitbucket</li>
+            <li class="list-group-item">Vs Code</li>
+            <li class="list-group-item">Sublime Text && Atom</li>
+            <li class="list-group-item">NPM</li>
+          </ul>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<!-- projects -->
+<div id="portfolio" class="bg-dark text-light">
+  <div class="container text-center">
+      <h2 class="h1 portfolio-intro center-border intro-h1">My Works</h2>
+      <p class="portfolio-desc intro-desc-p">Take a tour! Here are some of my big projects</p>
+    <div class="row">
+      <div class="col-md-6">
+        <a href="{% static 'images/1.jpg' %}"><img src="{% static 'images/ecommerce.jpg' %}" alt="" class="img-thumbnail work-image"></a>
+      </div>
+      <div class="col-md-6">
+        <div class="works">
+            <h2 class=" work-intro"> <i class="fa fa-check-square-o"></i>  E-Commerce Website</h2>
+            <p class="work-des">This is an e-commerce platforme.</p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="works">
+                <h2 class=" work-intro">  <i class="fa fa-check-square-o"></i> School Management System</h2>
+                <pp class="work-des">Manage your school or high-school online.</pp>
+            </div>
+          
+        </div>
+        <div class="col-md-6">
+            <a href="{% static 'images/1.jpg' %}"><img src="{% static 'images/school.png' %}" alt="" class="img-thumbnail"></a>
+        </div>
+    </div>
+      <div class="row">
+          <div class="col-md-6">
+            <a href="{% static 'images/1.jpg' %}"><img src="{% static 'images/theme.jpg' %}" alt="" class="img-thumbnail"></a>
+          </div>
+          <div class="col-md-6">
+            <div class="works">
+                <h2 class=" work-intro">  <i class="fa fa-check-square-o"></i> Themes</h2>
+                <pp class="work-des">I build real world and responsive themes.</pp>
+            </div>
+          </div>
+      </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="works">
+                    <h2 class=" work-intro">  <i class="fa fa-check-square-o"></i> Library Management</h2>
+                    <pp class="work-des">Manage your library with our  library Management System.</pp>
+                </div>   
+            </div>
+            <div class="col-md-6">
+                <a href="{% static 'images/1.jpg' %}"><img src="{% static 'images/library.jpg' %}" alt="" class="img-thumbnail"></a>
+            </div>
+        </div>
+  </div>
+</div>
+</div>
+<!-- contact -->
+<div id="contact" class="bg-secondary text-light">
+    
+        <div class="container text-center">
+            <h2 class="h1 contact-intro center-border intro-h1">Feel Free to contact Me!</h2>
+            <p class="contact-desc intro-desc-p">Online 24h/7</p>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="contact-info">
+                  <h2 class="h1"><i class="fa fa-info-circle"></i>  Infos</h2>
+                  <p>Address : Senegal-Dakar, Sicap Mbao Extension <br>
+                    Email : mstspr1155@gmail.com <br>
+                    Phone : +221 77 992 99 52 <br>
+                    Whatsapp : +221 76 377 22 60 <br>
+                  </p>
+                  <div class="social-link">
+                     <h1><i class="fa fa-thumbs-o-up"></i> Follow Us!</h1> 
+                     <a href="https://www.fb.com/mst.1155"><i class="fa fa-facebook-square fa-3x"></i></a>
+                     <a href="https://www.twitter.com/xarala221"><i class="fa fa-twitter-square fa-3x"></i></a>
+                     <a href="https://www.fb.com/xarala221"><i class="fa fa-google-plus-square fa-3x"></i></a>
+                     <a href="https://www.github.com/xarala221"><i class="fa fa-github-square fa-3x"></i></a>
+                  </div>
+                  
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="contact-form">
+                  <h2><i class="fa fa-send"></i>	Or Write to me</h2>
+                  {% include 'pages/contact_form.html' %}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
