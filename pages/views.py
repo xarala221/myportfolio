@@ -1,5 +1,6 @@
 from django.contrib.messages.views import SuccessMessageMixin
 from django.shortcuts import render
+from django.contrib.auth.decorators import login_required
 from django.views.generic import View, FormView, CreateView, DetailView
 from .forms import ContactForm
 from .models import Contact
@@ -16,7 +17,7 @@ class HomeView(SuccessMessageMixin, CreateView):
   def get_success_message(self, cleaned_data):
     print(cleaned_data)
     return "Thank You For Joining! We will answer you in 24h"
-
+@login_required(login_url='/admin/')
 def get_contact(request):
-  contacts = Contact.objects.all()
+  contacts = Contact.objects.all().order_by('-id')
   return render(request, "pages/contacts.html", {"contacts": contacts})

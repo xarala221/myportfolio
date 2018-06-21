@@ -1,15 +1,17 @@
 {% extends "base.html" %}
 {% block content %}
-{% include 'pages/partials/navbar.html' %}
+{% include 'blog/blog_nav.html' %}
 <div class="container">
 <div class="card " style="width: 100%;">
     {% if contacts %}
     <div class="card-body">
+        <h1 class="text-center">Here are all my Clients</h1>
         {% for contact in contacts %}
-      <h5 class="card-title">Client Name: {{ contact.name }}</h5>
+      <h5 class="card-title">Client Name: <strong>{{ contact.name }}</strong></h5>
       <h6 class="card-subtitle mb-2 text-muted">Client Email: {{ contact.email }}</h6>
       <p class="card-text">Message: {{ contact.message }}</p>
-      <a href="#" class="card-link">Answer</a>
+      <a href="mailto:{{contact.email}}" class="btn btn-outline-primary">Answer</a>
+      <hr class="my-4">
       {% endfor %}
     </div>
     {% else %}
@@ -17,4 +19,5 @@
       {% endif %}
   </div>
 </div>
+{% include 'pages/partials/footer.html' %}
 {% endblock content %}
