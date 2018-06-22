@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+  <div class="form-group">
+    <form action="" method="post">{% csrf_token %}
+      <h1 class="text-center bg-dark text-light">Delete Page</h1>
+      <h2 class="text-warning text-center">{{ post }}</h2>
+      <p>{{ post.content|safe|truncatewords:20 }}</p>
+      <div class="form-group text-center">
+          <input type="submit" value="Yes!" class="btn btn-outline-danger">
+          <a class="btn btn-outline-secondary" href="{% url 'detail' post.id %}">Cancel</a>
+      </div>
+
+    </form>
+  </div>
+</div>
+{% endblock content %}

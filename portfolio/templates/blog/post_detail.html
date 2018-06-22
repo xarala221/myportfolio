@@ -33,6 +33,11 @@ Ousseynou diop's blog {{post.title}}
     </div>
 </div>
 </div>
+{% if user.is_authenticated %}
+<div class="container editdelete">
+    <p><a href="{% url 'update' post.id %}" class="btn btn-outline-secondary float-left">Edit</a> <a href="{% url 'delete' post.id %}" class="btn btn-outline-secondary float-right">Delete</a></p>
+</div>
+{% endif %}
 <div class="container author ">
   <div class="media">
     <img src="{% static 'images/me.jpg' %}" alt="" class="mr-3 img-thumbnail" width="64px">
@@ -41,7 +46,7 @@ Ousseynou diop's blog {{post.title}}
         <p>Je suis Full Stack developpeur et createur de contenu.</p>
     </div>
   </div>
-
 </div>
+
 {% include 'pages/partials/footer.html' %}
 {% endblock content %}

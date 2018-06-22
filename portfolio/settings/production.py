@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'pages',
     'blog',
     'embed_video',
+    'tinymce',
 ]
 
 MIDDLEWARE = [

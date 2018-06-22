@@ -9,6 +9,9 @@ Ousseynou diop full stack developer blog
 {% if all_post %}
 <div class="container retour">
     <h1 class="text-center">{{title}}</h1>
+    {% if user.is_authenticated %}
+        <h1 class="text-right btn btn-outline-secondary"><a href="{% url 'create' %}">Create Post</a></h1>
+    {% endif %}
 </div>
 <div class="container">
     {% for post in all_post %}
