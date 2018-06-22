@@ -6,8 +6,11 @@ Django==2.0.5
 django-crispy-forms==1.7.2
 django-embed-video==1.1.2
 django-heroku==0.3.1
+django-tinymce==2.7.0
+django-tinymce4-lite==1.7.1
 gunicorn==19.8.1
 idna==2.7
+jsmin==2.2.2
 nmap==0.0.1
 olefile==0.45.1
 packaging==17.1
