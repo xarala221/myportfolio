@@ -29,7 +29,9 @@ Ousseynou diop full stack developer blog
         </div>
         <div class="col-md-6">
             <a style="color:#c05026; text-decoration:none;" href="{% url 'detail' post.id %}"><h2 class="post-title">{{ post.title }}</h2></a>
-            <p class="post-content">{{ post.content|truncatewords:50 }}</p>
+            {% autoescape off %}
+            <p class="post-content">{{ post.content|safe|truncatewords:50 }}</p>
+            {% endautoescape %}
             <p><i class="fa fa-calendar"></i> {{ post.published_at }}  <i class="fa fa-user-plus"></i> {{ post.author.get_full_name }}</p>
         </div>
     </div>

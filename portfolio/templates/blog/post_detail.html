@@ -26,7 +26,9 @@ Ousseynou diop's blog {{post.title}}
          <!-- download no-image -->
          <img src="{% static 'images/nophoto.png' %}" alt="" class="img-responsive img-thumbnail">
          {% endif %}
+         {% autoescape off %}
          <p style="font-size:20px; margin-top:20px">{{ post.content }}</p>
+         {% endautoescape %}
         </div>
     </div>
 </div>
