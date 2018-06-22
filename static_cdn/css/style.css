@@ -3,37 +3,40 @@ html{
 }
 body {
   background: #fff;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 #navbar .navbar-brand{
   font-weight: bold;
-  color: #c05026;
+  color: #ffffff;
   font-size: 25px;
   font-family: cursive;
 }
 .navbar{
-  border-bottom: 2px solid #c05026;
+  border-bottom: 2px solid white;
   padding: .5rem 1rem;
+  background: #ff0080;
 }
 .scrolled{
   background: rgba(0,0,0,0.7) !important;
 }
 #side-menu{
   margin-top: 65px;
-  background: #c05026;
+  background: #ff0080;
 }
 #side-menu .nav-link{
-  color: #fff;
-  font-weight: bold;
-  text-transform: uppercase;
+  color: #ffffff;
+  /* font-weight: bold; */
+  /* text-transform: uppercase; */
+  font-size: 20px;
 }
 .navbar-dark .navbar-nav .nav-link{
   color: #ffffff;
-  font-weight: bold;
-  text-transform: uppercase
+  /* font-weight: bold; */
+  /* text-transform: uppercase; */
+  font-size: 20px;
 }
 #header {
-  background-image: url('../images/code.jpg');
+  background-image: url('../images/bg.jpg');
   -webkit-background-size:cover;
   -moz-background-size:cover;
   -o-background-size:cover;
@@ -46,14 +49,14 @@ body {
   #header{
     height: 150vh;
     text-align:center;
-    padding: 50px 0;
+    padding: 20px 0;
   }
 }
 #header .overlay{
   position: absolute;
   top: 0;
   left: 0;
-  background: rgba(0,0,0,0.5);
+  background: rgba(0,0,0,0.7);
   width: 100%;
   height: 100%;
 }
@@ -83,42 +86,38 @@ body {
 }
 #header p{
   font-size: 30px;
-  color: #f26522;
+  color: #ff0080;
 }
 #header .fa{
   margin-top: 100px;
   color: #fff;
   text-decoration: none;
   padding: 15px 20px;
-  border: 2px solid #c05026;
-  border-radius: 50%;
-  font-size: 30px;
+  /* border: 2px solid #c05026; */
+  /* border-radius: 50%; */
+  font-size: 100px;
 }
 #header .fa:hover{
-  background: #fff;
-  color: #c05026;
+  color: #ff0080;
 }
 #skills{
-padding: 40px 0;
+  padding: 40px 0;
+  background: #ff0080;
 }
-
-/*
-#skills .fa{
-  border: 2px solid #f50202;
-  border-radius: 50%;
-  padding: 20px 20px;
-}
-*/
 #skills .skill-item{
     color: #ffffff;
     font-size: 30px;
     font-weight: bold;
 }
-#skills .list-group{
-  background: #ecfbff;
-  box-shadow: 0 0 10px #171717;
+#skills .skill-section{
   padding: 10px;
+}
+#skills .list-group{
+  /*background: #ecfbff;
+  box-shadow: 0 0 10px #171717;
+  padding: 10px;*/
   margin-bottom: 20px;
+  font-size: 20px;
 }
 #skills .list-group:hover{
   -webkit-transform: rotate(360deg);
@@ -128,6 +127,12 @@ padding: 40px 0;
   -o-transition: .5s all ease;
   transition: .5s all ease;
 }
+#skills .list-group .list-group-item{
+  background: transparent;
+  color: #ffffff;
+  border: 0;
+}
+/*
 #skills .list-one{
   background: #1d800d;
   box-shadow: 0 0 10px #ffffff;
@@ -149,13 +154,15 @@ padding: 40px 0;
   font-size: 20px;
   padding: 5px 0;
 }
-
+*/
 #skills .fa{
   margin: 15px 10px;
   font-size: 50px;
 }
 #portfolio{
-  padding: 40px 0;
+  padding: 20px 0;
+  background: #ff0080;
+  color: #ffff;
 }
 #portfolio .work-image{
   margin-bottom: 20px;
@@ -167,7 +174,7 @@ padding: 40px 0;
   margin-bottom: 20px;
 }
 #portfolio .works .work-intro{
-  color: #c05026;
+  color: #000000;
   font-size: 30px;
   font-weight: bold;
 }
@@ -176,7 +183,9 @@ padding: 40px 0;
   line-height: 1.7;
 }
 #contact{
-  padding: 40px 0;
+  padding: 20px 0;
+  background: #FF009A;
+  color: #fff
 }
 #contact .contact-info{
   padding: 10px 0;
@@ -224,6 +233,10 @@ padding: 40px 0;
 }
 .footer{
   padding: 20px 0;
+  background: #000014;
+  color: #fff;
+  /* font-weight: bold; */
+  font-size: 20px;
 }
 .post-detail{
   padding-top: 50px;
@@ -242,19 +255,19 @@ padding: 40px 0;
   display: block;
   width: 65px;
   height: 3px;
-  background: #f26522;
+  background: #ffffff;;
   margin: 25px auto !important;
 }
 .intro-h1{
 font-weight: bold;
 font-size: 30px;
 text-transform: uppercase;
+color: #ffffff;
 }
 .intro-desc-p{
   color: #ffffff;
-  font-weight: bold;
+  font-weight: 300;
   font-size: 24px;
   margin-bottom: 30px;
-  line-height: 1.7;
-  text-transform: capitalize
+  line-height: 1.5;
 }
