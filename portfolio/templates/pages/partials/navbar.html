@@ -47,3 +47,16 @@
     </div>
     
 </div>
+{% block message %}
+    {% if messages %}
+            
+    <div class='alert alert-success text-center'>
+        <div class='container'>
+         {% for message in messages %}
+            {{ message }}<br/>
+            {% endfor %}
+        </div>
+    </div>
+
+    {% endif %}
+    {% endblock message %}
