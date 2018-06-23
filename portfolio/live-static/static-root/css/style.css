@@ -14,7 +14,7 @@ body {
 .navbar{
   border-bottom: 2px solid #ff1600ed;
     padding: .5rem 1rem;
-    background: #ffffff;
+    background: #000000 !important;
 }/*
 .scrolled{
   background: rgba(0,0,0,0.7) !important;
@@ -25,11 +25,9 @@ body {
     font-weight: bold;
 
 }
-*/.navbar-dark .navbar-toggler{
-  background: #ff1600ed;
-}
+*/
 .navbar-dark .navbar-nav .nav-link{
-  color: #000000;
+  color: #ffffff;
     font-weight: bold;
     /* text-transform: uppercase; */
     /* font-size: 20px; */
