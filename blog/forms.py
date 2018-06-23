@@ -5,5 +5,5 @@ class BlogForm(forms.ModelForm):
   class Meta:
     model = Blog
     fields = [
-      'title', 'image', 'video', 'content',
+      'title', 'image', 'video', 'content','slug',
     ]

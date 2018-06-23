@@ -7,7 +7,7 @@ Ousseynou diop's blog {{post.title}}
 {% block content %}
 {% include 'blog/blog_nav.html' %}
 <div class="container retour">
-  <p><a href="{% url 'blog' %}" class="btn btn-outline-secondary float-left">Retour</a> <a href="{% url 'blog' %}" class="btn btn-outline-secondary float-right">Home</a></p>
+  <p><a href="{% url 'list' %}" class="btn btn-outline-secondary float-left">Retour</a> <a href="{% url 'list' %}" class="btn btn-outline-secondary float-right">Home</a></p>
 </div>
 <div class="post-detail">
 <div class="container">
@@ -35,7 +35,7 @@ Ousseynou diop's blog {{post.title}}
 </div>
 {% if user.is_authenticated %}
 <div class="container editdelete">
-    <p><a href="{% url 'update' post.id %}" class="btn btn-outline-secondary float-left">Edit</a> <a href="{% url 'delete' post.id %}" class="btn btn-outline-secondary float-right">Delete</a></p>
+    <p><a href="{% url 'update' post.slug %}" class="btn btn-outline-secondary float-left">Edit</a> <a href="{% url 'delete' post.slug %}" class="btn btn-outline-secondary float-right">Delete</a></p>
 </div>
 {% endif %}
 <div class="container author ">

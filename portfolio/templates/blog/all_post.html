@@ -6,7 +6,7 @@ Ousseynou diop full stack developer blog
 {% endblock title %}
 {% block content %}
 {% include 'blog/blog_nav.html' %}
-{% if all_post %}
+{% if posts %}
 <div class="container retour">
     <h1 class="text-center">{{title}}</h1>
     {% if user.is_authenticated %}
@@ -14,11 +14,11 @@ Ousseynou diop full stack developer blog
     {% endif %}
 </div>
 <div class="container">
-    {% for post in all_post %}
+    {% for post in posts %}
     <div class="row">
         <div class="col-md-4">
             {% if post.image %}
-            <a href="{% url 'detail' post.id %}"><img src="{{ post.image.url }}" alt="" class="img-responsive img-thumbnail"></a>
+            <a href="{{ post.get_absolute_url }}"><img src="{{ post.image.url }}" alt="" class="img-responsive img-thumbnail"></a>
             {% elif post.video %}
             {% video post.video as my_video %}
             <div class="embed-responsive embed-responsive-16by9">
@@ -31,7 +31,7 @@ Ousseynou diop full stack developer blog
             {% endif %}
         </div>
         <div class="col-md-6">
-            <a style="color:#c05026; text-decoration:none;" href="{% url 'detail' post.id %}"><h2 class="post-title">{{ post.title }}</h2></a>
+            <a style="color:#c05026; text-decoration:none;" href="#"><h2 class="post-title">{{ post.title }}</h2></a>
             {% autoescape off %}
             <p class="post-content">{{ post.content|safe|truncatewords:50 }}</p>
             {% endautoescape %}
@@ -41,6 +41,31 @@ Ousseynou diop full stack developer blog
     <hr class="my-4">
     {% endfor %}
 </div>
+
+{% if posts.has_other_pages %}
+<nav aria-label="Page navigation example">
+ <ul class="pagination justify-content-center">
+   {% if posts.has_previous %}
+     <li  class="page-item"><a class="page-link" href="?page={{ posts.previous_page_number }}">Precedent&laquo;</a></li>
+   {% else %}
+     <li class="page-item"><span >&laquo;</span></li>
+   {% endif %}
+   {% for i in posts.paginator.page_range %}
+     {% if posts.number == i %}
+       <li class="active page-item"><span>{{ i }}</span><span class="sr-only">(current)</span></li>
+     {% else %}
+       <li class="page-item"><a class="page-link" href="?page={{ i }}">{{ i }}</a></li>
+     {% endif %}
+   {% endfor %}
+   {% if posts.has_next %}
+     <li class="page-item"><a class="page-link" href="?page={{ posts.next_page_number }}">Suivant&raquo;</a></li>
+   {% else %}
+     <li class="page-item"><span class="page-item" >&raquo;</span></li>
+   {% endif %}
+ </ul>
+
+{% endif %}
+</nav>
 {% else %}
 <p class="text-center">We have no post</p>
 {% endif %}

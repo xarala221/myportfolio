@@ -7,7 +7,7 @@ body {
 }
 #navbar .navbar-brand{
   font-weight: bold;
-    color: #ff1600ed;
+    color: #ff1600ed !important;
     font-size: 25px;
     font-family: Verdana, Geneva, Tahoma, sans-serif
 }
