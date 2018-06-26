@@ -22,7 +22,7 @@ Ousseynou diop full stack developer blog
             {% elif post.video %}
             {% video post.video as my_video %}
             <div class="embed-responsive embed-responsive-16by9">
-              <iframe width="560" height="315" src="https://www.youtube.com/embed/{{post.video}}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+              <iframe width="560" height="315" class="embed-responsive-item" src="{{ my_video.url }}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
             </div>
             {% endvideo %}
             {% else %}
