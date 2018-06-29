@@ -1,6 +1,8 @@
 {% extends "base.html" %}
 {% load embed_video_tags %}
 {% load static %}
+{% load disqus_tags %}
+{% disqus_show_comments %}
 {% block title %}
 Ousseynou diop's blog {{post.title}}
 {% endblock title %}
@@ -33,12 +35,45 @@ Ousseynou diop's blog {{post.title}}
     </div>
 </div>
 </div>
+<!--disqus-->
+<div class="container">
+        <div id="disqus_thread"></div>
+        <script>
+        
+        /**
+        *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+        *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+        /*
+        var disqus_config = function () {
+        this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        };
+        */
+        (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        s.src = 'https://ousseynou-herokuapp-com.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+        })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+    <!--
+    <div id="disqus_thread"></div>
+    <script type="text/javascript" src="http://disqus.com/forums/arthurkozielsblog/embed.js"></script>
+    <noscript><p><a href="http://arthurkozielsblog.disqus.com/?url=ref">View the discussion thread.</a></p></noscript>
+    <p><a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a></p> -->
+</div>
+
+<!--disqus-->
 {% if user.is_authenticated %}
 <div class="container editdelete">
     <p><a href="{% url 'update' post.slug %}" class="btn btn-outline-secondary float-left">Edit</a> <a href="{% url 'delete' post.slug %}" class="btn btn-outline-secondary float-right">Delete</a></p>
 </div>
 {% endif %}
-<div class="container author ">
+
+<div class="container" style="margin-top: 30px;margin-bottom: 20px;">
   <div class="media">
     <img src="{% static 'images/me.jpg' %}" alt="" class="mr-3 img-thumbnail" width="64px">
     <div class="media-body">

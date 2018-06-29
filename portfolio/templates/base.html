@@ -1,5 +1,7 @@
 <!doctype html>
 {% load static %}
+{% load disqus_tags %}
+{% disqus_dev %}
 <html lang="en">
   <head>
     <!-- Required meta tags -->
@@ -27,6 +29,6 @@
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <!-- Static Files -->
     {% include 'js.html' %}
-    
+    <script id="dsq-count-scr" src="//ousseynou-herokuapp-com.disqus.com/count.js" async></script>
   </body>
 </html>
