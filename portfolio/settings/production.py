@@ -11,7 +11,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'o@wdw*j*7eavhej&e!o_u3(o%y8zf#)hv-vbo2(+g&(=0_2ymb'
-
+#Disqus api key
+DISQUS_API_KEY = '58rVubsEuU3k6BLL1HdNcgQazCtA5I0tl7nxRVTuwBes0pOv5aGjQZ375dglhwjj'
+DISQUS_WEBSITE_SHORTNAME = 'ousseynou'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
@@ -31,6 +33,7 @@ INSTALLED_APPS = [
     'blog',
     'embed_video',
     'tinymce',
+    'disqus',
 ]
 
 MIDDLEWARE = [
