@@ -109,3 +109,6 @@ $(document).ready(function () {
   }
 
 });
+
+var disqus_developer = 1;
+var disqus_url = 'https://ousseynou.herokuapp.com/';

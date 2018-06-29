@@ -7,9 +7,12 @@ body {
 }
 #navbar .navbar-brand{
   font-weight: bold;
-    color: ##fff; !important;
+    color: #000000 !important;
     font-size: 25px;
     font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+#navbar .navbar-brand span{
+  color: #ff1600ed;
 }
 .navbar{
   border-bottom: 2px solid #ff1600ed;

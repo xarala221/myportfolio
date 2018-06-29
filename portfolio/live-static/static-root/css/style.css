@@ -7,14 +7,17 @@ body {
 }
 #navbar .navbar-brand{
   font-weight: bold;
-    color: #ff1600ed !important;
+    color: #000000 !important;
     font-size: 25px;
     font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+#navbar .navbar-brand span{
+  color: #ff1600ed;
 }
 .navbar{
   border-bottom: 2px solid #ff1600ed;
     padding: .5rem 1rem;
-    background: #000000 !important;
+    background: #ffffff;
 }/*
 .scrolled{
   background: rgba(0,0,0,0.7) !important;
@@ -25,9 +28,11 @@ body {
     font-weight: bold;
 
 }
-*/
+*/.navbar-dark .navbar-toggler{
+  background: #ff1600ed;
+}
 .navbar-dark .navbar-nav .nav-link{
-  color: #ffffff;
+  color: #000000;
     font-weight: bold;
     /* text-transform: uppercase; */
     /* font-size: 20px; */
