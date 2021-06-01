@@ -21,5 +21,5 @@ python-nmap==0.6.1
 pytz==2018.4
 requests==2.19.1
 six==1.11.0
-urllib3==1.23
+urllib3==1.26.5
 whitenoise==3.3.1
